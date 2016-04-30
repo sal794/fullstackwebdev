@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1" />
+<title>Insert Title Here</title>
+</head>
+
+<body>
+This is where my report page would go!
+
+<table>
+<tr th:each="name,iterationStatus: ${Names}">
+<td th:text="${name}"></td>
+</tr>
+</table>
+
+
+<p th:text="${userName}"></p>
+
+</body>
+
+</html>

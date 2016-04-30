@@ -1,5 +1,8 @@
 package edu.umsl.springprofile;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.opensaml.ws.transport.http.HttpServletRequestAdapter;
@@ -16,10 +19,17 @@ public class ViewReport {
 	@RequestMapping(value="/viewreport", method=RequestMethod.POST)
 	public ModelAndView viewReport(@RequestParam("name") String name, @RequestParam("password") String password) {
 
-		ModelAndView mav = new ModelAndView("myreportpage.html");
+		ModelAndView mav = new ModelAndView("myreportpage");
+		mav.addObject("userName", name);
 		
-		System.out.println(name);
-		System.out.println(password);
+		
+		List<String> Names = new ArrayList<String>();
+		Names.add("Sam");
+		Names.add("Gene");
+		Names.add("Kat");
+		Names.add("Peyton Manning");
+		
+		mav.addObject("Names", Names);
 		
 		
 		return mav;
