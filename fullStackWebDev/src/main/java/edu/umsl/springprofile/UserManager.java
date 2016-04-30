@@ -17,5 +17,8 @@ public class UserManager {
 		tx.commit();
 		session.close();
 	}
+	public void checkUser(String user, String password, String name){
+		
+	}
 	
 }
